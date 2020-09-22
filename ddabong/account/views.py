@@ -1,15 +1,11 @@
 from django.shortcuts import render, get_object_or_404, redirect
 import urllib
-import json #
-from django.http import JsonResponse, HttpResponse #
 from django.views import View
 import allauth
 
 # Create your views here.
 
-def datas(request):
-    socialaccounts = Socialaccounts.objects
-    return render(request, 'mypage.html',{'socialaccounts' : socialaccounts})
+
 
 
 
