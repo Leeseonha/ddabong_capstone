@@ -33,4 +33,6 @@ urlpatterns = [
     path('v_detail/',  voulunteer_work.views.v_detail, name='v_detail'),
     path('mypage/',  mypage.views.mypage, name='mypage'),
     path('items/', items.views.items, name='items'),
+    path('keyboard/', items.views.keyboard, name='keyboard'),
+
 ]
