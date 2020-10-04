@@ -1,0 +1,26 @@
+{% load static %}
+
+<div class="createForm">
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <table class="createtable"> 
+        {{ forms.as_table }}
+        </table>
+        <input class="createButton" type="submit" value="입력">
+    </form>
+</div>
+
+<div>
+    {% for i in posts %}
+    <div>
+    {{ i.post_type }}<br>
+    {{ i.title }}<br>
+    {{ i.pub_date }}<br>
+    {{ i.b_type }}<br>
+    {{ i.body }}<br>
+    {{ i.region }}<br>
+    <a href="{% url 'update' pk=i.pk %}">수정</a>
+    <a href="{% url 'delete' pk=i.pk %}">삭제</a>
+    </div><br>
+    {% endfor %}
+</div>
