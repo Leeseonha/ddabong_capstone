@@ -41,112 +41,6 @@
     </div>
   </section>
 
-  <!--==========================
-      Speakers Section
-    ============================-->
-  <!-- <section id="speakers" class="wow fadeInUp">
-      <div class="container">
-        <div class="section-header">
-          <h2>Event Speakers</h2>
-          <p>Here are some of our speakers</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6">
-            <div class="speaker">
-              <img src="{% static 'img/speakers/1.jpg' %}" alt="Speaker 1" class="img-fluid">
-              <div class="details">
-                <h3><a href="speaker-details.html">Brenden Legros</a></h3>
-                <p>Quas alias incidunt</p>
-                <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                  <a href=""><i class="fa fa-facebook"></i></a>
-                  <a href=""><i class="fa fa-google-plus"></i></a>
-                  <a href=""><i class="fa fa-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="speaker">
-              <img src="{% static 'img/speakers/2.jpg' %}" alt="Speaker 2" class="img-fluid">
-              <div class="details">
-                <h3><a href="speaker-details.html">Hubert Hirthe</a></h3>
-                <p>Consequuntur odio aut</p>
-                <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                  <a href=""><i class="fa fa-facebook"></i></a>
-                  <a href=""><i class="fa fa-google-plus"></i></a>
-                  <a href=""><i class="fa fa-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="speaker">
-              <img src="{% static 'img/speakers/3.jpg' %}" alt="Speaker 3" class="img-fluid">
-              <div class="details">
-                <h3><a href="speaker-details.html">Cole Emmerich</a></h3>
-                <p>Fugiat laborum et</p>
-                <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                  <a href=""><i class="fa fa-facebook"></i></a>
-                  <a href=""><i class="fa fa-google-plus"></i></a>
-                  <a href=""><i class="fa fa-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="speaker">
-              <img src="{% static 'img/speakers/4.jpg' %}" alt="Speaker 4" class="img-fluid">
-              <div class="details">
-                <h3><a href="speaker-details.html">Jack Christiansen</a></h3>
-                <p>Debitis iure vero</p>
-                <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                  <a href=""><i class="fa fa-facebook"></i></a>
-                  <a href=""><i class="fa fa-google-plus"></i></a>
-                  <a href=""><i class="fa fa-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="speaker">
-              <img src="{% static 'img/speakers/5.jpg' %}" alt="Speaker 5" class="img-fluid">
-              <div class="details">
-                <h3><a href="speaker-details.html">Alejandrin Littel</a></h3>
-                <p>Qui molestiae natus</p>
-                <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                  <a href=""><i class="fa fa-facebook"></i></a>
-                  <a href=""><i class="fa fa-google-plus"></i></a>
-                  <a href=""><i class="fa fa-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="speaker">
-              <img src="{% static 'img/speakers/6.jpg' %}" alt="Speaker 6" class="img-fluid">
-              <div class="details">
-                <h3><a href="speaker-details.html">Willow Trantow</a></h3>
-                <p>Non autem dicta</p>
-                <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                  <a href=""><i class="fa fa-facebook"></i></a>
-                  <a href=""><i class="fa fa-google-plus"></i></a>
-                  <a href=""><i class="fa fa-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </section> -->
-
 
 
 
@@ -225,11 +119,11 @@
   <!--==========================
       Gallery Section
     ============================-->
-  <section id="gallery" class="wow fadeInUp">
+  <!-- <section id="gallery" class="wow fadeInUp">
 
     <div class="container">
       <div class="section-header">
-        <h2>후기</h2>
+        <h2>공여자리스트</h2>
         <p>Check our gallery from the recent events</p>
       </div>
     </div>
@@ -252,7 +146,72 @@
           src="{% static 'img/gallery/8.jpg' %}" alt=""></a>
     </div>
 
-  </section>
+  </section> -->
+  <section id="gallery" class="section-with-bg wow fadeInUp">
+  <section id="hotels">
+
+    <div class="container">
+      <div class="section-header">
+        <h2>공여자리스트</h2>
+        <p>Her are some nearby hotels</p>
+      </div>
+
+      <div class="row">
+
+        <div class="col-lg-4 col-md-6">
+          <div class="hotel">
+            <div class="hotel-img">
+              <img src="{% static 'img/hotels/1.jpg' %}" alt="Hotel 1" class="img-fluid">
+            </div>
+            <h3><a href="{% url 'v_detail' %}">Hotel 1</a></h3>
+            <div class="stars">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+            <p>0.4 Mile from the Venue</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="hotel">
+            <div class="hotel-img">
+              <img src="{% static 'img/hotels/2.jpg' %}" alt="Hotel 2" class="img-fluid">
+            </div>
+            <h3><a href="#">Hotel 2</a></h3>
+            <div class="stars">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half-full"></i>
+            </div>
+            <p>0.5 Mile from the Venue</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="hotel">
+            <div class="hotel-img">
+              <img src="{% static 'img/hotels/3.jpg' %}" alt="Hotel 3" class="img-fluid">
+            </div>
+            <h3><a href="#">Hotel 3</a></h3>
+            <div class="stars">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+            <p>0.6 Mile from the Venue</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section></section>
 
 
 
@@ -491,30 +450,6 @@
       </div>
   
     </section>
-
-  <!--==========================
-      Subscribe Section
-    ============================-->
-  <!-- <section id="subscribe">
-    <div class="container wow fadeInUp">
-      <div class="section-header">
-        <h2>Newsletter</h2>
-        <p>Rerum numquam illum recusandae quia mollitia consequatur.</p>
-      </div>
-
-      <form method="POST" action="#">
-        <div class="form-row justify-content-center">
-          <div class="col-auto">
-            <input type="text" class="form-control" placeholder="Enter your Email">
-          </div>
-          <div class="col-auto">
-            <button type="submit">Subscribe</button>
-          </div>
-        </div>
-      </form>
-
-    </div>
-  </section> -->
 
 </main>
 {% endblock content %}

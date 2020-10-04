@@ -27,7 +27,7 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     # path('oauth/', account.views.oauth, name='oauth'),
     # path('account/login/kakao/', account.views.kakao_login, name='kakao_login'),
-    # path('account/login/kakao/callback/', account.views.kakao_callback, name='kakao_callback'),
+    path('account/login/kakao/callback/', account.views.KakaoLoginVIew, name='KakaoLoginVIew'),
     path('', include('theme.urls')),
     path('v_area/',  voulunteer_work.views.v_area, name='v_area'),
     path('v_detail/',  voulunteer_work.views.v_detail, name='v_detail'),

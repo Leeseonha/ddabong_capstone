@@ -1,6 +1,62 @@
 from django.shortcuts import render, get_object_or_404, redirect
 import urllib
+from django.views import View
+import allauth
+
 # Create your views here.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class KakaoLoginVIew(View):
+    def get(self, request):
+        kakao_access_code = request.GET.get('code', None)
+
+        url = 'https://kauth.kakao.com/oauth/token'
+
+        headers = {'Content_type': 'application/x-www-form-urlencoded; charset=utf-8'}
+
+        body = {'grant_type' : 'authorization_code',
+                'client_id' : 'beb7c6a8d954a47c48242ba1c1dac2d4',
+                'redirect_uri' : 'http://127.0.0.1:8000/account/login/kakao/callback',
+                'code': kakao_access_code
+                }
+        token_kakao_response = request.post(url, headers = headers, data = body)
+
+        access_token = json.loads(token_kakao_response.text).get('access_token')
+
+        url = 'https://kapi.kako.com/v2/user/me'
+        headers = {
+            'Authorization' : f'Bearer {access_token}',
+            'Content-type': 'applicationapplication/x-www-form-urlencoded; charset=utf-8'
+        }
+
+        kakao_response = requests.get(url, headers = headers)
+        kakao_response = json.loads(kakao_response.text)
+        kakao = Socialplatform.objects.get(platform.text)
+        return HttpResponse(f'{kakao_response.text}')
+
+
+
+
+
+
+
 # def oauth(request):
 #     code = request.GET['code']
 #     print('code= ' + str(code))
