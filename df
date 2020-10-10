@@ -1,0 +1,118 @@
+[33mcommit faf206c94ef63258def4548403126137271de84e[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Leeseonha <jmtkdsh@gmail.com>
+Date:   Sat Oct 10 18:45:05 2020 +0900
+
+    new
+
+[33mcommit 1d6bd9d4c73f92525b26ef9e9b486bdbeacb5276[m[33m ([m[1;31morigin/dy[m[33m, [m[1;31morigin/NEW_SH[m[33m)[m
+Author: DongYeol <eastheat10@gamil.com>
+Date:   Sat Oct 10 17:14:36 2020 +0900
+
+    crud1
+
+[33mcommit e1cf3e60c7fb39f2c73c3f1dd9d20152d6633199[m
+Author: DongYeol <eastheat10@gamil.com>
+Date:   Sat Oct 10 15:49:37 2020 +0900
+
+    crud
+
+[33mcommit c70d6d1b17926bd83dd00693a90715bd342198b2[m
+Merge: e78ad46 b2fa79b
+Author: DongYeol <eastheat10@gamil.com>
+Date:   Sun Oct 4 16:24:59 2020 +0900
+
+    create
+
+[33mcommit e78ad465b5aa3995f791c2ecc80e1b82c77eddb3[m
+Author: DongYeol <eastheat10@gamil.com>
+Date:   Sun Oct 4 16:23:06 2020 +0900
+
+    create
+
+[33mcommit 7617b3a8bb01ebe5c7cb586ece52e2c468501c5e[m
+Author: DongYeol <eastheat10@gamil.com>
+Date:   Sun Oct 4 16:00:43 2020 +0900
+
+    create
+
+[33mcommit b2fa79bdc29af0c4fc9027de9cc249e27fefb03f[m[33m ([m[1;31morigin/je[m[33m)[m
+Author: JeongEun <lisasje25@gmail.com>
+Date:   Wed Sep 23 00:01:45 2020 +0900
+
+    db 확인11
+    
+    user 확인
+
+[33mcommit 1e4d15f683bd9e737525fd395d84cac6810bdaef[m
+Author: JeongEun <lisasje25@gmail.com>
+Date:   Tue Sep 22 23:50:51 2020 +0900
+
+    post 디비에 user 추가
+    
+    디비 추가
+
+[33mcommit 521df5c27e025a4ccd40872b63461d16b59797cc[m
+Author: JeongEun <lisasje25@gmail.com>
+Date:   Tue Sep 22 23:30:58 2020 +0900
+
+    post 디비 구성 완료
+    
+    카카오에서 user 끌어오기 가능
+    아마,,?
+
+[33mcommit e81176b0afd5421275e6621d3bd9599327b5ece3[m
+Author: DongYeol <eastheat10@gamil.com>
+Date:   Tue Sep 22 12:59:42 2020 +0900
+
+    hi
+
+[33mcommit 276b8eed62daae94d1f8610e994e4984b5b7892b[m
+Merge: a22a44e 04e2bc3
+Author: JeongEun <lisasje25@gmail.com>
+Date:   Mon Sep 21 22:12:03 2020 +0900
+
+    Merge branch 'master' into je
+
+[33mcommit a22a44e5a2040f85907ff8e076283626668a670d[m
+Author: JeongEun <lisasje25@gmail.com>
+Date:   Mon Sep 21 22:10:34 2020 +0900
+
+    변경없음
+    
+    아직 변경 없음
+
+[33mcommit 04e2bc3dfdb544b86959825cfda340676bab8cae[m
+Author: Leeseonha <jmtkdsh@gmail.com>
+Date:   Mon Sep 21 22:04:30 2020 +0900
+
+    db_post
+
+[33mcommit efb225d88d5dffec18fa4c43f7249a91ce446e0f[m
+Author: Leeseonha <jmtkdsh@gmail.com>
+Date:   Fri Sep 18 15:21:35 2020 +0900
+
+    html
+
+[33mcommit 24bf5cedeb42f161d363f4aeaad415195cf18d7e[m
+Author: Leeseonha <jmtkdsh@gmail.com>
+Date:   Tue Sep 15 17:03:31 2020 +0900
+
+    user_model
+
+[33mcommit ba8c76a86186560b6976aa9a0ecd3decdb236e9f[m[33m ([m[1;31morigin/yewon[m[33m)[m
+Author: Leeseonha <jmtkdsh@gmail.com>
+Date:   Wed Sep 9 18:35:26 2020 +0900
+
+    html_footer
+
+[33mcommit 89e0701df33f12c74ed30f58795b868470596bb2[m
+Author: Leeseonha <jmtkdsh@gmail.com>
+Date:   Wed Sep 9 17:55:21 2020 +0900
+
+    nav
+
+[33mcommit b7ec10c2fb102f2b26dbf01c0c9078872bbeab33[m
+Author: Leeseonha <jmtkdsh@gmail.com>
+Date:   Tue Sep 1 18:56:00 2020 +0900
+
+    kakaologin
