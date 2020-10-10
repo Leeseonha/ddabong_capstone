@@ -33,4 +33,12 @@ urlpatterns = [
     path('v_detail/',  voulunteer_work.views.v_detail, name='v_detail'),
     path('mypage/',  mypage.views.mypage, name='mypage'),
     path('items/', items.views.items, name='items'),
+
+    # CRUD
+    path('create/', contact.views.create, name='create'),
+    path('delete/<int:pk>', contact.views.delete, name='delete'),
+    path('update/<int:pk>', contact.views.update, name='update'),
+
+    path('views_donor/', contact.views.views_donor, name='views_donor'),
+    path('views_recipient/', contact.views.views_recipient, name='views_recipient'),
 ]

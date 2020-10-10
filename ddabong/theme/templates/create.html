@@ -1,10 +1,11 @@
 {% load static %}
+<h1>CREATE</h1>
 
 <div class="createForm">
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         <table class="createtable"> 
-        {{ forms.as_table }}
+        {{ form.as_table }}
         </table>
         <input class="createButton" type="submit" value="입력">
     </form>
