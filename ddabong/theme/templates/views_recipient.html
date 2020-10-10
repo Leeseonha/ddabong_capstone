@@ -1,1 +1,19 @@
+{% load static %}
 <H1>RECIPIENT VIEW</H1>
+
+<div>
+    {% for i in post %}
+    <div>
+        게시물번호:&nbsp;{{ i.pk }}<br>
+        카테고리:&nbsp;{{ i.post_type }}<br>
+        글쓴이:&nbsp;{{ i.user }}<br>
+        제목:&nbsp;{{ i.title }}<br>
+        날짜:&nbsp;{{ i.pub_date }}<br>
+        혈액형:&nbsp;{{ i.b_type }}<br>
+        내용:&nbsp;{{ i.body }}<br>
+        지역:&nbsp;{{ i.region }}<br>
+        <a href="{% url 'update' pk=i.pk %}">수정</a>
+        <a href="{% url 'delete' pk=i.pk %}">삭제</a>
+        </div><br>
+    {% endfor %}
+</div>

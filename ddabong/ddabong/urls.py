@@ -41,4 +41,6 @@ urlpatterns = [
 
     path('views_donor/', contact.views.views_donor, name='views_donor'),
     path('views_recipient/', contact.views.views_recipient, name='views_recipient'),
+
+    
 ]

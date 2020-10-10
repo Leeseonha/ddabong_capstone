@@ -56,7 +56,7 @@ class Post(models.Model):
     user = models.ForeignKey(allauth.app_settings.USER_MODEL,on_delete=models.CASCADE)
     post_type = models.CharField(max_length= 50, choices= Post_type)
     title = models.CharField(max_length= 200)
-    pub_date = models.DateTimeField('date published')
+    pub_date = models.DateTimeField(auto_now_add=True)
     b_type = models.CharField(max_length=50, choices = B_TYPES)
     body = models.TextField()
     region = models.CharField(max_length= 50, choices=Regions)

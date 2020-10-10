@@ -12,24 +12,28 @@ def create(request):
         if form.is_valid():
             post = form.save(commit=False)
             post.user = request.user
-            post.pub_date = timezone.datetime.now()
             post.save()
             return redirect('create') 
     else:
         form = PostForm()
-        posts = Post.objects.all()
+        posts = Post.objects.all().order_by('-pub_date')
         return render(request, 'create.html', {'form': form, 'posts': posts})
 
 def update(request, pk):
     post = get_object_or_404(Post, pk=pk)
+    name = post.user
     if request.method == "POST":
         form = PostForm(request.POST)
         if form.is_valid():
             post = form.save(commit=False)
-            post.user = request.user
-            post.pub_date = timezone.datetime.now()
+            post.user = name
             post.save()
-            return redirect('create') 
+            if post.post_type == 'Donor':
+                return redirect('views_donor')
+            elif post.post_type == 'recipient':
+                return redirect('views_recipient')
+            else:
+                return redirect('create')
     else:
         form = PostForm(instance=post)
         return render(request, 'create.html', {'form': form})
@@ -37,10 +41,17 @@ def update(request, pk):
 def delete(request, pk):
     post = get_object_or_404(Post, pk=pk)
     post.delete()
-    return redirect('create')
+    if post.post_type == 'Donor':
+        return redirect('views_donor')
+    elif post.post_type == 'recipient':
+        return redirect('views_recipient')
+    else:
+        return redirect('create')
 
 def views_donor(request):
-    return render(request, 'views_donor.html')
+    post = Post.objects.filter(post_type='Donor').order_by('-pub_date')
+    return render(request, 'views_donor.html', {'post': post})
 
 def views_recipient(request):
-    return render(request, 'views_recipient.html')
+    post = Post.objects.filter(post_type='recipient').order_by('-pub_date')
+    return render(request, 'views_recipient.html', {'post': post})
