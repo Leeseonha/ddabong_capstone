@@ -34,5 +34,5 @@ urlpatterns = [
     path('mypage/',  mypage.views.mypage, name='mypage'),
     path('items/', items.views.items, name='items'),
     path('keyboard/', items.views.keyboard, name='keyboard'),
-
+    path('message/', items.views.message, name='message'),
 ]
