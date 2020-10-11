@@ -1,4 +1,77 @@
+{% extends 'layout.html' %}
 {% load static %}
+
+{% block content %}
+
+<section id="hotels" class="section-with-bg wow fadeInUp">
+
+    <div class="container">
+      <div class="section-header">
+        <br><br>
+        <h2>헌혈요청리스트</h2>
+        <p>Her are some nearby hotels</p>
+        <ul class="nav-menu">
+          <li class="login-btn"><a href="{% url 'v_area' %}">내주변헌혈병원</a></li>
+        </ul>
+      </div>
+
+      <div class="row">
+
+        <div class="col-lg-4 col-md-6">
+          <div class="hotel">
+            <div class="hotel-img">
+              <img src="{% static 'img/hotels/1.jpg' %}" alt="Hotel 1" class="img-fluid">
+            </div>
+            <h3><a href="{% url 'v_detail' %}">Hotel 1</a></h3>
+            <div class="stars">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+            <p>0.4 Mile from the Venue</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="hotel">
+            <div class="hotel-img">
+              <img src="{% static 'img/hotels/2.jpg' %}" alt="Hotel 2" class="img-fluid">
+            </div>
+            <h3><a href="#">Hotel 2</a></h3>
+            <div class="stars">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half-full"></i>
+            </div>
+            <p>0.5 Mile from the Venue</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="hotel">
+            <div class="hotel-img">
+              <img src="{% static 'img/hotels/3.jpg' %}" alt="Hotel 3" class="img-fluid">
+            </div>
+            <h3><a href="#">Hotel 3</a></h3>
+            <div class="stars">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+            <p>0.6 Mile from the Venue</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
 <H1>RECIPIENT VIEW</H1>
 
 <div>
@@ -17,3 +90,4 @@
         </div><br>
     {% endfor %}
 </div>
+{% endblock content %}
