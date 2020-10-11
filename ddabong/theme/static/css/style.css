@@ -103,7 +103,7 @@ h6 {
 --------------------------------*/
 
 .section-header {
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   position: relative;
   padding-bottom: 20px;
 }
@@ -1286,7 +1286,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
-
+#createForms{
+  width: 300px;
+  margin: 0 auto;
+}
 #contact {
   padding: 60px 0;
 }

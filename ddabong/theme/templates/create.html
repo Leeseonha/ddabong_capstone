@@ -1,29 +1,49 @@
+{% extends 'layout.html' %}
 {% load static %}
-<h1>CREATE</h1>
 
-<div class="createForm">
-    <form method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
-        <table class="createtable"> 
-        {{ form.as_table }}
-        </table>
-        <input class="createButton" type="submit" value="입력">
-    </form>
-</div>
+{% block content %}
+<!--==========================
+      Contact Section
+    ============================-->
+<section id="contact" class="section-bg wow fadeInUp">
 
-<div>
-    {% for i in posts %}
-    <div>
-    게시물번호:&nbsp;{{ i.pk }}<br>
-    카테고리:&nbsp;{{ i.post_type }}<br>
-    글쓴이:&nbsp;{{ i.user }}<br>
-    제목:&nbsp;{{ i.title }}<br>
-    날짜:&nbsp;{{ i.pub_date }}<br>
-    혈액형:&nbsp;{{ i.b_type }}<br>
-    내용:&nbsp;{{ i.body }}<br>
-    지역:&nbsp;{{ i.region }}<br>
-    <a href="{% url 'update' pk=i.pk %}">수정</a>
-    <a href="{% url 'delete' pk=i.pk %}">삭제</a>
-    </div><br>
-    {% endfor %}
-</div>
+    <div class="container">
+
+        <div class="section-header">
+            <br><br>
+            <h2>글쓰기</h2>
+            <p>공여자, 수혜자 선택하여 게시글을 작성해주세요</p>
+        </div>
+
+        <div id = "createForms">
+        <div class="createForm">
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <table class="createtable">
+                    {{ form.as_table }}
+                </table><br>
+                <div class="text-center"><input class="createButton" button type="submit" value="입력"></button></div>
+                <!-- <input class="createButton" type="submit" value="입력"> -->
+            </form>
+        </div></div>
+
+        <div>
+            {% for i in posts %}
+            <div>
+                게시물번호:&nbsp;{{ i.pk }}<br>
+                카테고리:&nbsp;{{ i.post_type }}<br>
+                글쓴이:&nbsp;{{ i.user }}<br>
+                제목:&nbsp;{{ i.title }}<br>
+                날짜:&nbsp;{{ i.pub_date }}<br>
+                혈액형:&nbsp;{{ i.b_type }}<br>
+                내용:&nbsp;{{ i.body }}<br>
+                지역:&nbsp;{{ i.region }}<br>
+                <a href="{% url 'update' pk=i.pk %}">수정</a>
+                <a href="{% url 'delete' pk=i.pk %}">삭제</a>
+            </div><br>
+            {% endfor %}
+        </div>
+
+    </div>
+</section><!-- #contact -->
+{% endblock content %}

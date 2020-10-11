@@ -5,7 +5,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>DDABONG</title>
+  <title>하트시그널</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -15,7 +15,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   <!-- Favicons -->
-  <link href="{% static 'img/favicon.png' %}" rel="icon">
+  <link href="{% static 'img/그림1.jpg' %}" rel="icon">
   <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -61,7 +61,7 @@
             <!-- <li><a href="#venue">Venue</a></li> -->
             <li><a href="/#hotels">헌혈요청리스트</a></li>
             <li><a href="/#gallery">공여자리스트</a></li>
-            <li><a href="/#contact">글쓰기</a></li>
+            <li><a href="{% url 'create' %}">글쓰기</a></li>
             <li><a href="/#faq">질의응답(F.A.Q)</a></li>
             <li><a href="/#supporters">후원</a></li>
             <!-- <li class="buy-tickets"><a href="/#buy-tickets">로그인하기</a></li> -->
