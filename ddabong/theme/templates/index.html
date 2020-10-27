@@ -8,42 +8,76 @@
 <section id="intro">
   <div class="intro-container wow fadeIn">
     <h1 class="mb-4 pb-0">The Annual<br><span>Marketing</span> Conference</h1>
-    <p class="mb-4 pb-0">10-12 December, Downtown Conference Center, New York</p>
+    <p class="mb-4 pb-0">간편한 카카오톡 로그인과 게시글 챗봇 알림 서비스를 이용해 지정헌혈을 매칭해보세요</p>
     <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video"
       data-autoplay="true"></a>
-    <a href="#about" class="about-btn scrollto">About The Event</a>
+    <a href="#speakers" class="about-btn scrollto">지정헌혈매칭 '하트시그널'</a>
   </div>
 </section>
 
 <main id="main">
-
-  <!--==========================
-      About Section
-    ============================-->
-  <section id="about">
+<!--==========================
+    About Section
+  ============================-->
+  <section id="speakers" class="wow fadeInUp">
     <div class="container">
+      <div class="section-header">
+        <h2>하트시그널이란?</h2>
+        <p>간편한 카카오톡 로그인과 게시글 챗봇 알림 서비스를 이용해 지정헌혈을 매칭할 수 있는 서비스입니다.</p>
+      </div>
+
       <div class="row">
-        <div class="col-lg-6">
-          <h2>About The Event</h2>
-          <p>Sed nam ut dolor qui repellendus iusto odit. Possimus inventore eveniet accusamus error amet eius aut
-            accusantium et. Non odit consequatur repudiandae sequi ea odio molestiae. Enim possimus sunt inventore in
-            est ut optio sequi unde.</p>
+        <div class="col-lg-3">
+          <div class="speaker">
+            <div class="img-fluid">
+              <img src="{% static 'img/카카오톡.png' %}" width="250px" height="250px" alt="Speaker 1">
+              <div class="details">
+                <h3>소셜 로그인</h3>
+                <p>간편하게 회원가입 하기!!</p>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="col-lg-3">
-          <h3>Where</h3>
-          <p>Downtown Conference Center, New York</p>
+          <div class="speaker">
+            <div class="img-fluid">
+              <img src="{% static 'img/혈액.jpg' %}" width="250px" height="250px" alt="Speaker 1">
+              <div class="details">
+                <h3>수혜자/공여자 소통가능</h3>
+                <p>혈액 정보 포함한 게시글 작성하기!!</p>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="col-lg-3">
-          <h3>When</h3>
-          <p>Monday to Wednesday<br>10-12 December</p>
+          <div class="speaker">
+            <div class="img-fluid">
+              <img src="{% static 'img/헌혈의집.png' %}" width="250px" height="250px" alt="Speaker 1">
+              <div class="details">
+                <h3>헌혈의 집</h3>
+                <p>현 위치에서 가까운 헌혈의 집 찾기!!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="speaker">
+            <div class="img-fluid">
+              <img src="{% static 'img/챗봇.png' %}" width="250px" height="250px" alt="Speaker 1">
+              <div class="details">
+                <h3>카카오 챗봇 알림</h3>
+                <p>로그인된 카카오계정 정보전송!!</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
     </div>
-  </section>
 
+  </section>  
 
-
-
+</section>
 
   <!--==========================
       Hotels Section
@@ -53,7 +87,7 @@
     <div class="container">
       <div class="section-header">
         <h2>헌혈요청리스트</h2>
-        <p>Her are some nearby hotels</p>
+        <p>지정 헌혈이 필요한 사람들은 이 게시판을 이용해주세요.</p>
         <ul class="nav-menu">
           <li class="login-btn"><a href="{% url 'v_area' %}">내주변헌혈병원</a></li>
         </ul>
@@ -119,41 +153,13 @@
   <!--==========================
       Gallery Section
     ============================-->
-  <!-- <section id="gallery" class="wow fadeInUp">
-
-    <div class="container">
-      <div class="section-header">
-        <h2>공여자리스트</h2>
-        <p>Check our gallery from the recent events</p>
-      </div>
-    </div>
-
-    <div class="owl-carousel gallery-carousel">
-      <a href="{% url 'items' %}"><img src="{% static 'img/gallery/1.jpg' %}" alt=""></a>
-      <a href="{% static 'img/gallery/2.jpg' %}" class="venobox" data-gall="gallery-carousel"><img
-          src="{% static 'img/gallery/2.jpg' %}" alt=""></a>
-      <a href="{% static 'img/gallery/3.jpg' %}" class="venobox" data-gall="gallery-carousel"><img
-          src="{% static 'img/gallery/3.jpg' %}" alt=""></a>
-      <a href="{% static 'img/gallery/4.jpg' %}" class="venobox" data-gall="gallery-carousel"><img
-          src="{% static 'img/gallery/4.jpg' %}" alt=""></a>
-      <a href="{% static 'img/gallery/5.jpg' %}" class="venobox" data-gall="gallery-carousel"><img
-          src="{% static 'img/gallery/5.jpg' %}" alt=""></a>
-      <a href="{% static 'img/gallery/6.jpg' %}" class="venobox" data-gall="gallery-carousel"><img
-          src="{% static 'img/gallery/6.jpg' %}" alt=""></a>
-      <a href="{% static 'img/gallery/7.jpg' %}" class="venobox" data-gall="gallery-carousel"><img
-          src="{% static 'img/gallery/7.jpg' %}" alt=""></a>
-      <a href="{% static 'img/gallery/8.jpg' %}" class="venobox" data-gall="gallery-carousel"><img
-          src="{% static 'img/gallery/8.jpg' %}" alt=""></a>
-    </div>
-
-  </section> -->
   <section id="gallery" class="section-with-bg wow fadeInUp">
   <section id="hotels">
 
     <div class="container">
       <div class="section-header">
         <h2>공여자리스트</h2>
-        <p>Her are some nearby hotels</p>
+        <p>헌혈 공여자는 이 게시판을 이용해주세요.</p>
       </div>
 
       <div class="row">
@@ -214,81 +220,6 @@
   </section></section>
 
 
-
-  <!--==========================
-      Contact Section
-    ============================-->
-  <!--<section id="contact" class="section-bg wow fadeInUp">
-
-    <div class="container">
-
-      <div class="section-header">
-        <h2>Contact Us</h2>
-        <p>Nihil officia ut sint molestiae tenetur.</p>
-      </div>
-
-      <div class="row contact-info">
-
-        <div class="col-md-4">
-          <div class="contact-address">
-            <i class="ion-ios-location-outline"></i>
-            <h3>Address</h3>
-            <address>A108 Adam Street, NY 535022, USA</address>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="contact-phone">
-            <i class="ion-ios-telephone-outline"></i>
-            <h3>Phone Number</h3>
-            <p><a href="tel:+155895548855">+1 5589 55488 55</a></p>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="contact-email">
-            <i class="ion-ios-email-outline"></i>
-            <h3>Email</h3>
-            <p><a href="mailto:info@example.com">info@example.com</a></p>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="form">
-        <div id="sendmessage">Your message has been sent. Thank you!</div>
-        <div id="errormessage"></div>
-        <form action="" method="post" role="form" class="contactForm">
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4"
-                data-msg="Please enter at least 4 chars" />
-              <div class="validation"></div>
-            </div>
-            <div class="form-group col-md-6">
-              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"
-                data-rule="email" data-msg="Please enter a valid email" />
-              <div class="validation"></div>
-            </div>
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
-              data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-            <div class="validation"></div>
-          </div>
-          <div class="form-group">
-            <textarea class="form-control" name="message" rows="5" data-rule="required"
-              data-msg="Please write something for us" placeholder="Message"></textarea>
-            <div class="validation"></div>
-          </div>
-          <div class="text-center"><button type="submit">Send Message</button></div>
-        </form>
-      </div>
-
-    </div>
-  </section>--><!-- #contact -->
-
-
   <!--==========================
       F.A.Q Section
     ============================-->
@@ -305,74 +236,56 @@
           <ul id="faq-list">
 
             <li>
-              <a data-toggle="collapse" class="collapsed" href="#faq1">Non consectetur a erat nam at lectus urna duis?
+              <a data-toggle="collapse" class="collapsed" href="#faq1">회원가입은 어떻게 하나요?
                 <i class="fa fa-minus-circle"></i></a>
               <div id="faq1" class="collapse" data-parent="#faq-list">
                 <p>
-                  Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur
-                  gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                  카카오톡 계정 연동을 통해 간편하게 로그인을 할 수 있습니다. 
                 </p>
               </div>
             </li>
 
             <li>
-              <a data-toggle="collapse" href="#faq2" class="collapsed">Feugiat scelerisque varius morbi enim nunc
-                faucibus a pellentesque? <i class="fa fa-minus-circle"></i></a>
+              <a data-toggle="collapse" href="#faq2" class="collapsed">헌혈 요청 및 수혜는 어떻게 이루어지나요? <i class="fa fa-minus-circle"></i></a>
               <div id="faq2" class="collapse" data-parent="#faq-list">
                 <p>
-                  Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id
-                  donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit
-                  ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                  헌혈 요청 및 수혜는 반드시 로그인 후 글쓰기를 통해 신청 가능합니다.
                 </p>
               </div>
             </li>
 
             <li>
-              <a data-toggle="collapse" href="#faq3" class="collapsed">Dolor sit amet consectetur adipiscing elit
-                pellentesque habitant morbi? <i class="fa fa-minus-circle"></i></a>
+              <a data-toggle="collapse" href="#faq3" class="collapsed">수혜자와 공여자 매칭은 어떻게 이루어지나요? <i class="fa fa-minus-circle"></i></a>
               <div id="faq3" class="collapse" data-parent="#faq-list">
                 <p>
-                  Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum
-                  integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt.
-                  Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi
-                  quis
+                  헌혈 요청자와 공여자가 해당 게시물 상단에 있는 알림 버튼을 누르면 로그인된 글쓴이의 카카오 계정으로 '하트시그널' 챗봇에서 메시지가 발송됩니다.
                 </p>
               </div>
             </li>
 
             <li>
-              <a data-toggle="collapse" href="#faq4" class="collapsed">Ac odio tempor orci dapibus. Aliquam eleifend mi
-                in nulla? <i class="fa fa-minus-circle"></i></a>
+              <a data-toggle="collapse" href="#faq4" class="collapsed">현 위치에서 가까운 헌혈의 집 찾기도 가능한가요? <i class="fa fa-minus-circle"></i></a>
               <div id="faq4" class="collapse" data-parent="#faq-list">
                 <p>
-                  Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id
-                  donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit
-                  ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                  네 가능합니다. 헌혈요청리스트 페이지 상단에 위치한 '내주변헌혈병원' 버튼을 클릭한 후 조회 가능합니다.
                 </p>
               </div>
             </li>
 
             <li>
-              <a data-toggle="collapse" href="#faq5" class="collapsed">Tempus quam pellentesque nec nam aliquam sem et
-                tortor consequat? <i class="fa fa-minus-circle"></i></a>
+              <a data-toggle="collapse" href="#faq5" class="collapsed">카카오 채널 챗봇에서 공여자와 수혜자의 정보가 전송되나요? <i class="fa fa-minus-circle"></i></a>
               <div id="faq5" class="collapse" data-parent="#faq-list">
                 <p>
-                  Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc
-                  vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus
-                  gravida quis blandit turpis cursus in
+                  카카오 채널 챗봇은 헌혈요청리스트 페이지와 공여자리스트 페이지 상단에 있는 알림 버튼을 누르면 로그인된 글쓴이의 카카오 계정 정보가 자동으로 전송됩니다.
                 </p>
               </div>
             </li>
 
             <li>
-              <a data-toggle="collapse" href="#faq6" class="collapsed">Tortor vitae purus faucibus ornare. Varius vel
-                pharetra vel turpis nunc eget lorem dolor? <i class="fa fa-minus-circle"></i></a>
+              <a data-toggle="collapse" href="#faq6" class="collapsed">수술을 받은 경우 언제 헌혈에 참여할 수 있나요? <i class="fa fa-minus-circle"></i></a>
               <div id="faq6" class="collapse" data-parent="#faq-list">
                 <p>
-                  Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada
-                  nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis
-                  tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat commodo sed egestas egestas
-                  fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.
+                  수혈 받은 수술은 1년 경과 후, 일반적인 대수술(전신마취를 한 경우)은 6개월 경과 후, 소수술은 최소 1개월이 경과 후에 헌혈 참여가 가능합니다. 수술의 종류 및 경과 정도에 따라 헌혈유보기간이 변경될 수 있으니 헌혈장소의 문진 담당 간호사와 상의해 주시기 바랍니다.
                 </p>
               </div>
             </li>

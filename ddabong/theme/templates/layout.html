@@ -10,16 +10,16 @@
   <meta content="" name="keywords">
   <meta content="" name="description">
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="{% static 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' %}">
+  <script src="{% static 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js' %}"></script>
+  <script src="{% static 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js' %}"></script>
 
   <!-- Favicons -->
   <link href="{% static 'img/그림1.jpg' %}" rel="icon">
   <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800"
+  <link href="{% static 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800' %}"
     rel="stylesheet">
 
   <!-- Bootstrap CSS File -->
@@ -46,8 +46,8 @@
 
       <div class="row">
         <div class="col">
-          <div id="logo" class="pull-left">
-            <a href="/#intro" class="scrollto"><img src="{% static 'img/logo.png' %}" alt="" title=""></a>
+          <div id="logo" class="col-6">
+            <a href="/#intro" class="scrollto"><img src="{% static 'img/그림_logo.png' %}" width="140px" alt="" title=""></a>
           </div>
         </div>
 
@@ -55,7 +55,7 @@
           <!-- <nav id="nav-menu-container"> -->
           <ul class="nav-menu">
             <li class="menu-active"><a href="/#intro">메인</a></li>
-            <li><a href="/#about">소개</a></li>
+            <li><a href="/#speakers">소개</a></li>
             <!-- <li><a href="/#speakers">봉사페이지</a></li> -->
             <!-- <li><a href="/#schedule">Schedule</a></li> -->
             <!-- <li><a href="#venue">Venue</a></li> -->
@@ -79,11 +79,7 @@
                 aria-expanded="false">{{user.username}} 님이 로그인 중</a>
               <div class="dropdown-menu">
                 <a class="dropdown-item" href="{% url 'mypage' %}">
-                  <p>내봉사내역</p>
-                </a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">
-                  <p>내포인트내역</p>
+                  <p>내 게시글 작성 내역</p>
                 </a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="/accounts/logout">
@@ -115,7 +111,7 @@
           <div class="col-lg-3 col-md-6 footer-contact">
             <h4></h4>
             <div class="copyright">
-              &copy; Copyright <strong>따봉 sh & je & dy</strong>
+              &copy;  <strong>하트시그널 sh & je & dy & yw</strong>
             </div>
             <div class="credits">
               Developed by <a href="https://www.instagram.com/seon._.h_a/">이선하</a>,
