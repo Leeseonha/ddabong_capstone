@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block css %}
+<link href="{% static 'css/detail.css' %}" rel="stylesheet">
+{% endblock %}
+{% block content %}
+
+<h1>TEST</h1>
+<div class="container">
+    게시물번호:&nbsp;{{ form.pk }}<br>
+    카테고리:&nbsp;{{ form.post_type }}<br>
+    글쓴이:&nbsp;{{ form.user }}<br>
+    제목:&nbsp;{{ form.title }}<br>
+    날짜:&nbsp;{{ form.pub_date }}<br>
+    혈액형:&nbsp;{{ form.b_type }}<br>
+    내용:&nbsp;{{ form.body }}<br>
+    지역:&nbsp;{{ form.region }}<br>
+    <a href="{% url 'update' pk=form.pk %}">수정</a>
+    <a href="{% url 'delete' pk=form.pk %}">삭제</a>
+</div><br> 
+{% endblock %}

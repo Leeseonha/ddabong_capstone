@@ -19,30 +19,30 @@
         <div class="createForm">
             <form method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
-                <table class="createtable">
-                    {{ form.as_table }}
-                </table><br>
-                <div class="text-center"><input class="createButton" button type="submit" value="입력"></button></div>
+                <div class="createtable">
+                    <span class="c_title">CATEGORY</span> <br> {{ form.post_type }}<br><br>
+                    {{ form.title }}<br><br>
+                    <span class="c_title">BLOODTYPE</span> <br> {{ form.b_type }}<br><br>
+                    {{ form.body }}<br><br>
+                    <span class="c_title">REGION</span> <br> {{ form.region }}
+                </div><br>
+                <div class="text-center"><button class="createButton"  type="submit" value="입력">입력</button></div>
                 <!-- <input class="createButton" type="submit" value="입력"> -->
             </form>
         </div></div>
 
-        <div>
+        <!-- <div>
             {% for i in posts %}
-            <div>
-                게시물번호:&nbsp;{{ i.pk }}<br>
-                카테고리:&nbsp;{{ i.post_type }}<br>
-                글쓴이:&nbsp;{{ i.user }}<br>
-                제목:&nbsp;{{ i.title }}<br>
-                날짜:&nbsp;{{ i.pub_date }}<br>
-                혈액형:&nbsp;{{ i.b_type }}<br>
-                내용:&nbsp;{{ i.body }}<br>
-                지역:&nbsp;{{ i.region }}<br>
-                <a href="{% url 'update' pk=i.pk %}">수정</a>
-                <a href="{% url 'delete' pk=i.pk %}">삭제</a>
-            </div><br>
+            <a href="{% url 'detail' pk=i.pk %}">
+            <span>
+                {{ i.post_type }}
+                {{ i.title }}
+                {{ i.user }}
+                {{ i.pub_date }}
+            </span>
+            </a>
             {% endfor %}
-        </div>
+        </div> -->
 
     </div>
 </section><!-- #contact -->

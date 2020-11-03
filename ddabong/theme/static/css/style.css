@@ -1667,3 +1667,53 @@ body.mobile-nav-active #mobile-nav-toggle {
     margin-top: 10px;
   }
 }
+
+#id_title {
+  color: #03033f;
+  font-size: 18px;
+  width: 260px;
+  height: 40px;
+  border: 2px solid pink;
+  text-align: center;
+}
+
+#id_body {
+  color: #03033f;
+  font-size: 18px;
+  width: 260px;
+  height: 250px;
+  border: 2px solid pink;
+  text-align: center;
+}
+
+#id_post_type{
+  margin-left: 70px;
+}
+
+#id_b_type{
+  margin-left: 70px;
+}
+
+#id_region{
+  margin-left: 70px;
+}
+
+.createtable {
+  margin-left: 40px;
+
+}
+
+.text-center {
+  margin-left: 40px;
+}++-8
+++-8
+.c_title {++-8
+  margin-left: 70px;++-8
+}++-8
+++-8
+.createButton {++-8
+  border: pink solid 2px;++-8
+  background: none;++-8
+  width: 100px; ++-8
+  height: 40px;
+}

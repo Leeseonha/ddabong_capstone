@@ -38,6 +38,10 @@ def update(request, pk):
         form = PostForm(instance=post)
         return render(request, 'create.html', {'form': form})
 
+def detail(request, pk):
+    form = get_object_or_404(Post, pk=pk)
+    return render(request, 'detail.html', {'form': form})
+
 def delete(request, pk):
     post = get_object_or_404(Post, pk=pk)
     post.delete()
