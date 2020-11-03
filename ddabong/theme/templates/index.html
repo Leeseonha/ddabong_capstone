@@ -11,358 +11,48 @@
     <p class="mb-4 pb-0">간편한 카카오톡 로그인과 게시글 챗봇 알림 서비스를 이용해 지정헌혈을 매칭해보세요</p>
     <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video"
       data-autoplay="true"></a>
-    <a href="#speakers" class="about-btn scrollto">지정헌혈매칭 '하트시그널'</a>
+    <a href="{% url 'speakers' %}" class="about-btn scrollto">지정헌혈매칭 '하트시그널'</a>
   </div>
 </section>
 
 <main id="main">
+
 <!--==========================
-    About Section
+    v_area Section
   ============================-->
-  <section id="speakers" class="wow fadeInUp">
-    <div class="container">
-      <div class="section-header">
-        <h2>하트시그널이란?</h2>
-        <p>간편한 카카오톡 로그인과 게시글 챗봇 알림 서비스를 이용해 지정헌혈을 매칭할 수 있는 서비스입니다.</p>
-      </div>
+  <!--==========================
+      Venue Section
+    ============================-->
+<section id="venue" class="wow fadeInUp">
 
-      <div class="row">
-        <div class="col-lg-3">
-          <div class="speaker">
-            <div class="img-fluid">
-              <img src="{% static 'img/카카오톡.png' %}" width="250px" height="250px" alt="Speaker 1">
-              <div class="details">
-                <h3>소셜 로그인</h3>
-                <p>간편하게 회원가입 하기!!</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="speaker">
-            <div class="img-fluid">
-              <img src="{% static 'img/혈액.jpg' %}" width="250px" height="250px" alt="Speaker 1">
-              <div class="details">
-                <h3>수혜자/공여자 소통가능</h3>
-                <p>혈액 정보 포함한 게시글 작성하기!!</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="speaker">
-            <div class="img-fluid">
-              <img src="{% static 'img/헌혈의집.png' %}" width="250px" height="250px" alt="Speaker 1">
-              <div class="details">
-                <h3>헌혈의 집</h3>
-                <p>현 위치에서 가까운 헌혈의 집 찾기!!</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="speaker">
-            <div class="img-fluid">
-              <img src="{% static 'img/챗봇.png' %}" width="250px" height="250px" alt="Speaker 1">
-              <div class="details">
-                <h3>카카오 챗봇 알림</h3>
-                <p>로그인된 카카오계정 정보전송!!</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+  <div class="container-fluid">
 
+    <div class="section-header">
+      <h2>내주변헌혈가능병원</h2>
+      <p>현 위치에서 가까운 헌혈 가능 병원을 찾아보세요.</p>
     </div>
 
-  </section>  
+    <div class="row no-gutters">
+      <div class="col-lg-6 venue-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
+          frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
 
+      <div class="col-lg-6 venue-info">
+        <div class="row justify-content-center">
+          <div class="col-11 col-lg-8">
+            <h3>Downtown Conference Center, New York</h3>
+            <p>Iste nobis eum sapiente sunt enim dolores labore accusantium autem. Cumque beatae ipsam. Est quae sit qui
+              voluptatem corporis velit. Qui maxime accusamus possimus. Consequatur sequi et ea suscipit enim nesciunt
+              quia velit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </section>
-
-  <!--==========================
-      Hotels Section
-    ============================-->
-  <section id="hotels" class="section-with-bg wow fadeInUp">
-
-    <div class="container">
-      <div class="section-header">
-        <h2>헌혈요청리스트</h2>
-        <p>지정 헌혈이 필요한 사람들은 이 게시판을 이용해주세요.</p>
-        <ul class="nav-menu">
-          <li class="login-btn"><a href="{% url 'v_area' %}">내주변헌혈병원</a></li>
-        </ul>
-      </div>
-
-      <div class="row">
-
-        <div class="col-lg-4 col-md-6">
-          <div class="hotel">
-            <div class="hotel-img">
-              <img src="{% static 'img/hotels/1.jpg' %}" alt="Hotel 1" class="img-fluid">
-            </div>
-            <h3><a href="{% url 'v_detail' %}">Hotel 1</a></h3>
-            <div class="stars">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-            </div>
-            <p>0.4 Mile from the Venue</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6">
-          <div class="hotel">
-            <div class="hotel-img">
-              <img src="{% static 'img/hotels/2.jpg' %}" alt="Hotel 2" class="img-fluid">
-            </div>
-            <h3><a href="#">Hotel 2</a></h3>
-            <div class="stars">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star-half-full"></i>
-            </div>
-            <p>0.5 Mile from the Venue</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6">
-          <div class="hotel">
-            <div class="hotel-img">
-              <img src="{% static 'img/hotels/3.jpg' %}" alt="Hotel 3" class="img-fluid">
-            </div>
-            <h3><a href="#">Hotel 3</a></h3>
-            <div class="stars">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-            </div>
-            <p>0.6 Mile from the Venue</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-  </section>
-
-  <!--==========================
-      Gallery Section
-    ============================-->
-  <section id="gallery" class="section-with-bg wow fadeInUp">
-  <section id="hotels">
-
-    <div class="container">
-      <div class="section-header">
-        <h2>공여자리스트</h2>
-        <p>헌혈 공여자는 이 게시판을 이용해주세요.</p>
-      </div>
-
-      <div class="row">
-
-        <div class="col-lg-4 col-md-6">
-          <div class="hotel">
-            <div class="hotel-img">
-              <img src="{% static 'img/hotels/1.jpg' %}" alt="Hotel 1" class="img-fluid">
-            </div>
-            <h3><a href="{% url 'v_detail' %}">Hotel 1</a></h3>
-            <div class="stars">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-            </div>
-            <p>0.4 Mile from the Venue</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6">
-          <div class="hotel">
-            <div class="hotel-img">
-              <img src="{% static 'img/hotels/2.jpg' %}" alt="Hotel 2" class="img-fluid">
-            </div>
-            <h3><a href="#">Hotel 2</a></h3>
-            <div class="stars">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star-half-full"></i>
-            </div>
-            <p>0.5 Mile from the Venue</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6">
-          <div class="hotel">
-            <div class="hotel-img">
-              <img src="{% static 'img/hotels/3.jpg' %}" alt="Hotel 3" class="img-fluid">
-            </div>
-            <h3><a href="#">Hotel 3</a></h3>
-            <div class="stars">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-            </div>
-            <p>0.6 Mile from the Venue</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-  </section></section>
-
-
-  <!--==========================
-      F.A.Q Section
-    ============================-->
-  <section id="faq" class="wow fadeInUp">
-
-    <div class="container">
-
-      <div class="section-header">
-        <h2>F.A.Q </h2>
-      </div>
-
-      <div class="row justify-content-center">
-        <div class="col-lg-9">
-          <ul id="faq-list">
-
-            <li>
-              <a data-toggle="collapse" class="collapsed" href="#faq1">회원가입은 어떻게 하나요?
-                <i class="fa fa-minus-circle"></i></a>
-              <div id="faq1" class="collapse" data-parent="#faq-list">
-                <p>
-                  카카오톡 계정 연동을 통해 간편하게 로그인을 할 수 있습니다. 
-                </p>
-              </div>
-            </li>
-
-            <li>
-              <a data-toggle="collapse" href="#faq2" class="collapsed">헌혈 요청 및 수혜는 어떻게 이루어지나요? <i class="fa fa-minus-circle"></i></a>
-              <div id="faq2" class="collapse" data-parent="#faq-list">
-                <p>
-                  헌혈 요청 및 수혜는 반드시 로그인 후 글쓰기를 통해 신청 가능합니다.
-                </p>
-              </div>
-            </li>
-
-            <li>
-              <a data-toggle="collapse" href="#faq3" class="collapsed">수혜자와 공여자 매칭은 어떻게 이루어지나요? <i class="fa fa-minus-circle"></i></a>
-              <div id="faq3" class="collapse" data-parent="#faq-list">
-                <p>
-                  헌혈 요청자와 공여자가 해당 게시물 상단에 있는 알림 버튼을 누르면 로그인된 글쓴이의 카카오 계정으로 '하트시그널' 챗봇에서 메시지가 발송됩니다.
-                </p>
-              </div>
-            </li>
-
-            <li>
-              <a data-toggle="collapse" href="#faq4" class="collapsed">현 위치에서 가까운 헌혈의 집 찾기도 가능한가요? <i class="fa fa-minus-circle"></i></a>
-              <div id="faq4" class="collapse" data-parent="#faq-list">
-                <p>
-                  네 가능합니다. 헌혈요청리스트 페이지 상단에 위치한 '내주변헌혈병원' 버튼을 클릭한 후 조회 가능합니다.
-                </p>
-              </div>
-            </li>
-
-            <li>
-              <a data-toggle="collapse" href="#faq5" class="collapsed">카카오 채널 챗봇에서 공여자와 수혜자의 정보가 전송되나요? <i class="fa fa-minus-circle"></i></a>
-              <div id="faq5" class="collapse" data-parent="#faq-list">
-                <p>
-                  카카오 채널 챗봇은 헌혈요청리스트 페이지와 공여자리스트 페이지 상단에 있는 알림 버튼을 누르면 로그인된 글쓴이의 카카오 계정 정보가 자동으로 전송됩니다.
-                </p>
-              </div>
-            </li>
-
-            <li>
-              <a data-toggle="collapse" href="#faq6" class="collapsed">수술을 받은 경우 언제 헌혈에 참여할 수 있나요? <i class="fa fa-minus-circle"></i></a>
-              <div id="faq6" class="collapse" data-parent="#faq-list">
-                <p>
-                  수혈 받은 수술은 1년 경과 후, 일반적인 대수술(전신마취를 한 경우)은 6개월 경과 후, 소수술은 최소 1개월이 경과 후에 헌혈 참여가 가능합니다. 수술의 종류 및 경과 정도에 따라 헌혈유보기간이 변경될 수 있으니 헌혈장소의 문진 담당 간호사와 상의해 주시기 바랍니다.
-                </p>
-              </div>
-            </li>
-
-          </ul>
-        </div>
-      </div>
-
-    </div>
-
-  </section>
-
-  <!--==========================
-      Sponsors Section
-    ============================-->
-    <section id="supporters" class="section-with-bg wow fadeInUp">
-
-      <div class="container">
-        <div class="section-header">
-          <h2>Sponsors</h2>
-        </div>
-  
-        <div class="row no-gutters supporters-wrap clearfix">
-  
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <img src="{% static 'img/supporters/대한적십자사.jpg' %}" class="img-fluid" alt="">
-            </div>
-          </div>
-  
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <img src="{% static 'img/supporters/kakao.png' %}" class="img-fluid" alt="">
-            </div>
-          </div>
-  
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <img src="{% static 'img/supporters/aws.png' %}" class="img-fluid" alt="">
-            </div>
-          </div>
-  
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <img src="{% static 'img/supporters/보건복지부.png' %}" class="img-fluid" alt="">
-            </div>
-          </div>
-  
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <img src="{% static 'img/supporters/google.png' %}" class="img-fluid" alt="">
-            </div>
-          </div>
-  
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <img src="{% static 'img/supporters/naver.jpg' %}" class="img-fluid" alt="">
-            </div>
-          </div>
-  
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <img src="{% static 'img/supporters/samsung.png' %}" class="img-fluid" alt="">
-            </div>
-          </div>
-  
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <img src="{% static 'img/supporters/대한적십자사.jpg' %}" class="img-fluid" alt="">
-            </div>
-          </div>
-  
-        </div>
-  
-      </div>
-  
-    </section>
 
 </main>
 {% endblock content %}
