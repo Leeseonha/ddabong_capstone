@@ -33,6 +33,9 @@ urlpatterns = [
     path('v_detail/',  voulunteer_work.views.v_detail, name='v_detail'),
     path('mypage/',  mypage.views.mypage, name='mypage'),
     path('items/', items.views.items, name='items'),
+    path('speakers/', mypage.views.speakers, name='speakers'),
+    path('faq/', mypage.views.faq, name='faq'),
+    path('supporters/', mypage.views.supporters, name='supporters'),
 
     # CRUD
     path('create/', contact.views.create, name='create'),
@@ -42,6 +45,10 @@ urlpatterns = [
 
     path('views_donor/', contact.views.views_donor, name='views_donor'),
     path('views_recipient/', contact.views.views_recipient, name='views_recipient'),
+
+    #chatbot
+    path('keyboard/', items.views.keyboard, name='keyboard'),
+    path('message/', items.views.message, name='message'),
 
     
 ]

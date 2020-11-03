@@ -1705,15 +1705,15 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .text-center {
   margin-left: 40px;
-}++-8
-++-8
-.c_title {++-8
-  margin-left: 70px;++-8
-}++-8
-++-8
-.createButton {++-8
-  border: pink solid 2px;++-8
-  background: none;++-8
-  width: 100px; ++-8
+}
+
+.c_title {
+  margin-left: 70px;
+}
+
+.createButton {
+  border: pink solid 2px;
+  background: none;
+  width: 100px;
   height: 40px;
 }
