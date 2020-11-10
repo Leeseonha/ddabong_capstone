@@ -58,5 +58,5 @@ class Post(models.Model):
     title = models.CharField(max_length= 200)
     pub_date = models.DateTimeField(auto_now_add=True)
     b_type = models.CharField(max_length=50, choices = B_TYPES)
-    body = models.CharField(max_length=500)
+    body = models.TextField()
     region = models.CharField(max_length= 50, choices=Regions)
