@@ -6,7 +6,7 @@ class PostForm(forms.ModelForm):
         model = Post
         
         fields = ['post_type', 'title', 'b_type', 'body', 'region']
-
+        body = forms.CharField( widget=forms.Textarea )
         help_texts = {
             'post_type': None,
             'title': None,
@@ -19,7 +19,6 @@ class PostForm(forms.ModelForm):
             # 'post_type' : forms.TextInput(attrs={'placeholder': 'CATEGORY'}),
             # 'b_type' : forms.TextInput(attrs={'placeholder': 'BLOODTYPE'}),
             # 'region' : forms.TextInput(attrs={'placeholder': 'REGION'}),
-
             'title' : forms.TextInput(attrs={'placeholder': 'TITLE'}),
             'body' : forms.TextInput(attrs={'placeholder': 'CONTEXT'}),
 

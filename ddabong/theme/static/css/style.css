@@ -1675,6 +1675,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   height: 40px;
   border: 2px solid pink;
   text-align: center;
+  padding: 2px;
 }
 
 #id_body {
@@ -1684,6 +1685,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   height: 250px;
   border: 2px solid pink;
   text-align: center;
+  padding: 2px;
 }
 
 #id_post_type{
