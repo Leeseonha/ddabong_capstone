@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block css %}
+<link href="{% static 'css/detail.css' %}" rel="stylesheet">
+{% endblock %}
+{% block content %}
+
+<h1>TEST</h1>
+<div class="container">
+    <div class="detail_header">
+        <br><br>
+        <h2>{{ form.pk }}.&nbsp;{{ form.title }}</h2>
+        {{ form.pub_date }}&nbsp;<span class="detail_post_type">{{ form.post_type }}</span><br>
+        &nbsp;{{ form.user }}&nbsp;&nbsp;{{ form.b_type }}&nbsp;&nbsp;{{ form.region }}<br>
+    </div>
+    <div class="detail_body">
+    {{ form.body }}<br>
+    </div><br><br>
+    {% if user.username == form.user %}
+        <a href="{% url 'update' pk=form.pk %}">수정</a>
+        <a href="{% url 'delete' pk=form.pk %}">삭제</a>
+    {% endif %}
+</div><br>
+{% endblock %}

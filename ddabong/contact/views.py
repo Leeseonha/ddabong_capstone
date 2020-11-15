@@ -7,13 +7,15 @@ from django.utils import timezone
 
 # Create your views here.
 def create(request):
+    if not request.user.is_active:
+        return HttpResponse("로그인 해주세요.")
     if request.method == "POST":
         form = PostForm(request.POST)
         if form.is_valid():
             post = form.save(commit=False)
             post.user = request.user
             post.save()
-            return redirect('create') 
+            return redirect('views_recipient') 
     else:
         form = PostForm()
         posts = Post.objects.all().order_by('-pub_date')
@@ -38,6 +40,10 @@ def update(request, pk):
         form = PostForm(instance=post)
         return render(request, 'create.html', {'form': form})
 
+def detail(request, pk):
+    form = get_object_or_404(Post, pk=pk)
+    return render(request, 'detail.html', {'form': form})
+
 def delete(request, pk):
     post = get_object_or_404(Post, pk=pk)
     post.delete()
@@ -55,3 +61,4 @@ def views_donor(request):
 def views_recipient(request):
     post = Post.objects.filter(post_type='recipient').order_by('-pub_date')
     return render(request, 'views_recipient.html', {'post': post})
+

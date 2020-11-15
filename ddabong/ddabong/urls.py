@@ -31,7 +31,7 @@ urlpatterns = [
     path('', include('theme.urls')),
     path('v_area/',  voulunteer_work.views.v_area, name='v_area'),
     path('v_detail/',  voulunteer_work.views.v_detail, name='v_detail'),
-    path('mypage/',  mypage.views.mypage, name='mypage'),
+    path('mypage/<str:pk>',  mypage.views.mypage, name='mypage'),
     path('items/', items.views.items, name='items'),
     path('speakers/', mypage.views.speakers, name='speakers'),
     path('faq/', mypage.views.faq, name='faq'),
@@ -41,6 +41,7 @@ urlpatterns = [
     path('create/', contact.views.create, name='create'),
     path('delete/<int:pk>', contact.views.delete, name='delete'),
     path('update/<int:pk>', contact.views.update, name='update'),
+    path('detail/<int:pk>', contact.views.detail, name='detail'),
 
     path('views_donor/', contact.views.views_donor, name='views_donor'),
     path('views_recipient/', contact.views.views_recipient, name='views_recipient'),
