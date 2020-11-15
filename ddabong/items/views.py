@@ -11,22 +11,22 @@ def items(request):
 def keyboard(request):
     return JsonResponse(
         {
-            # 'type':'buttons',
-            # 'buttons':['내주변헌혈','공여자정보요청','수혜자정보요청']
-            'type': 'text'
+            'type':'buttons',
+            'buttons':['내주변헌혈','공여자정보요청','수혜자정보요청']
+            # 'type': 'text'
         }
     )
 
 @csrf_exempt
 def message(request):
-    answer = ((request.body).decode('utf-8'))
-    return_json_str = json.loads(answer)
-    return_str = return_json_str['userRequest']['utterance']
-    # json_str = ((request.body).decode('utf-8'))
-    # received_json_data = json.loads(json_str)
-    # cafeteria_name = received_json_data['content'].encode('utf-8')
+    # answer = ((request.body).decode('utf-8'))
+    # return_json_str = json.loads(answer)
+    # return_str = return_json_str['userRequest']['utterance']
+    json_str = ((request.body).decode('utf-8'))
+    received_json_data = json.loads(json_str)
+    cafeteria_name = received_json_data['content']
 
-    if return_str == '테스트':
+    if cafeteria_name == '테스트':
         return JsonResponse({
             'version': "2.0",
             'template': {
@@ -42,6 +42,7 @@ def message(request):
                 }]
             }
         })
+        
 
 # @csrf_exempt
 # def message(request):
