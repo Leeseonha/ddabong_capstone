@@ -30,7 +30,7 @@ def update(request, pk):
     post = get_object_or_404(Post, pk=pk)
     name = post.user
     if request.method == "POST":
-        form = PostForm(request.POST)
+        form = PostForm(request.POST,instance=post)
         if form.is_valid():
             post = form.save(commit=False)
             post.user = name
