@@ -15,7 +15,12 @@ def create(request):
             post = form.save(commit=False)
             post.user = request.user
             post.save()
-            return redirect('views_recipient') 
+            if post.post_type == 'Donor':
+                return redirect('views_donor')
+            elif post.post_type == 'recipient':
+                return redirect('views_recipient')
+            else:
+                return redirect('create')
     else:
         form = PostForm()
         posts = Post.objects.all().order_by('-pub_date')
