@@ -48,7 +48,7 @@ urlpatterns = [
 
     #chatbot
     path('keyboard/', items.views.keyboard, name='keyboard'),
-    path('keyboard/message/', items.views.message, name='message'),
+    path('message/', items.views.message, name='message'),
 
     
 ]
