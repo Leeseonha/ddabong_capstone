@@ -1667,3 +1667,11 @@ body.mobile-nav-active #mobile-nav-toggle {
     margin-top: 10px;
   }
 }
+ /* .row no-gutters{
+   margin-left: 550px;
+ } */
+
+ #menu_wrap.bg_white{
+  margin-left: 550px;
+ }
+
