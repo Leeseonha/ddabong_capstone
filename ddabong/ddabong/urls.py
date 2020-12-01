@@ -36,7 +36,11 @@ urlpatterns = [
     path('speakers/', mypage.views.speakers, name='speakers'),
     path('faq/', mypage.views.faq, name='faq'),
     path('supporters/', mypage.views.supporters, name='supporters'),
-
+    # path('tests1/', items.views.returnMenu, name='tests1'),
+    # path('tests2/', items.views.returnAvaliableTimeDormitory, name='tests2'),
+    # path('tests3/', items.views.returnAvaliableTime, name='tests3'),
+    # path('tests4/', items.views.bob, name='tests4'),
+ 
     # CRUD
     path('create/', contact.views.create, name='create'),
     path('delete/<int:pk>', contact.views.delete, name='delete'),
@@ -48,7 +52,7 @@ urlpatterns = [
 
     #chatbot
     path('keyboard/', items.views.keyboard, name='keyboard'),
-    path('keyboard/message/', items.views.message, name='message'),
+    path('message/', items.views.message, name='message'),
 
     
 ]
