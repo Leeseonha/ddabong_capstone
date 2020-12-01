@@ -969,6 +969,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   border: 1px solid #e0e5fa;
   background: #fff;
   margin-bottom: 30px;
+  margin-left: 38%;
+  margin-top: 20px;
+  width: 600px;
 }
 
 #hotels .hotel:hover .hotel-img img {
@@ -1734,3 +1737,6 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-top: 2px;
   padding-top: 3px;
 }
+/* #menu_wrap.bg_white{
+  margin-left: 550px;
+ } */
